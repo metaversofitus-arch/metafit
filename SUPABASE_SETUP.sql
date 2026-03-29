@@ -25,3 +25,8 @@ create policy "Users can update own profile"
 create policy "Users can insert own profile"
   on public.profiles for insert
   with check (auth.uid() = id);
+
+-- Add archetype and training_level columns (run this if you already ran the first SQL)
+alter table public.profiles add column if not exists archetype text default 'street';
+alter table public.profiles add column if not exists training_level text default 'beginner';
+alter table public.profiles add column if not exists goal text default 'volume';
