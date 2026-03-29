@@ -160,25 +160,18 @@ export default function Home() {
             Tu coach.<br /><span style={{ color:'#b71c1c' }}>Tu modelo a seguir.</span>
           </h2>
         </div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1rem', maxWidth:'600px', margin:'0 auto' }}>
-          {[
-            { img:'/coaches/male.png', label:'Coach Masculino', sub:'Plan Men F3/F4' },
-            { img:'/coaches/female.png', label:'Coach Femenina', sub:'Plan Women F3/F4' },
-          ].map(c=>(
-            <div key={c.label} style={{ background:'#080404', border:'1px solid #1a0a0a', overflow:'hidden', position:'relative' }}>
-              <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,rgba(183,28,28,0.5),transparent)', zIndex:2 }} />
-              <div style={{ aspectRatio:'3/4', position:'relative', overflow:'hidden' }}>
-                <img src={c.img} alt={c.label} style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top' }} />
-                <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top, rgba(5,2,2,0.9) 0%, transparent 50%)' }} />
-              </div>
-              <div style={{ padding:'0.85rem', position:'relative', marginTop:'-2.5rem', zIndex:2 }}>
-                <div style={{ fontFamily:'Barlow Condensed,sans-serif', fontWeight:700, fontSize:'1rem', textTransform:'uppercase', letterSpacing:'0.05em', color:'#e8edf2' }}>{c.label}</div>
-                <div style={{ color:'#6b4040', fontSize:'0.75rem', marginTop:'2px' }}>{c.sub}</div>
-              </div>
+        <div style={{ maxWidth:'560px', margin:'0 auto', background:'#080404', border:'1px solid #1a0a0a', overflow:'hidden', position:'relative' }}>
+          <div style={{ position:'absolute', top:0, left:0, right:0, height:'2px', background:'linear-gradient(90deg,transparent,rgba(183,28,28,0.5),transparent)', zIndex:2 }} />
+          <div style={{ position:'relative', overflow:'hidden' }}>
+            <img src="/coaches/duo.png" alt="Coaches MetaFit" style={{ width:'100%', objectFit:'cover', display:'block' }} />
+            <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top, rgba(5,2,2,0.9) 0%, rgba(5,2,2,0.1) 50%, transparent 100%)' }} />
+            <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'1.5rem', zIndex:2 }}>
+              <div style={{ fontFamily:'Barlow Condensed,sans-serif', fontWeight:900, fontSize:'1.2rem', textTransform:'uppercase', letterSpacing:'0.08em', color:'#e8edf2', marginBottom:'4px' }}>Tus Coaches MetaFit</div>
+              <div style={{ color:'#8b5a5a', fontSize:'0.82rem' }}>Planes Men & Women · F3 y F4 · Básico y Premium</div>
             </div>
-          ))}
+          </div>
         </div>
-        <p style={{ textAlign:'center', color:'#6b4040', fontSize:'0.8rem', marginTop:'1rem' }}>Con Premium puedes personalizar completamente tu coach</p>
+        <p style={{ textAlign:'center', color:'#6b4040', fontSize:'0.8rem', marginTop:'1rem' }}>Con Premium personalizas completamente tu coach</p>
       </section>
 
       {/* ARQUETIPOS con imágenes */}
